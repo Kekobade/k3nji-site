@@ -7,6 +7,7 @@
     <title>K3nji's Home</title>
 </head>
 <body>
+     <div id="stars"></div>
     <h1>Welcome, visitors!</h1>
     <p>This is K3nji's website, <i>thanks for stopping by :)</i></p>
     <p style="color: #ea6465"><i>"more to come <del>soon</del>..."</i></p>
@@ -67,5 +68,21 @@
     	<a href="https://github.com/fortyseven-wizard" target="_blank" rel="noopener noreferrer"><img src="assets\88x31-github.png"></a>  
     	<a href="https://twitter.com/n_ollyowo" target="_blank" rel="noopener noreferrer"><img src="assets\88x31-twitter.png"></a>
 		<a href="https://www.youtube.com/watch?v=zry4zeN0SHw" target="_blank" rel="noopener noreferrer"><img src="assets\88x31-bookmarks.png"></a>  
+		
+<script>
+  const starsContainer = document.getElementById('stars');
+  const numStars = 150;
+
+  for (let i = 0; i < numStars; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random() * 100 + 'vw';
+    star.style.top = Math.random() * 100 + 'vh';
+    star.style.animationDelay = Math.random() * 3 + 's';
+    star.style.animationDuration = (2 + Math.random() * 3) + 's';
+    starsContainer.appendChild(star);
+  }
+</script>
+
 </body>
 </html>
